@@ -1,4 +1,4 @@
-package dp;
+package highfre;
 
 public class MaxSubArray {
 	public int maxSubArray(int[] A) {
