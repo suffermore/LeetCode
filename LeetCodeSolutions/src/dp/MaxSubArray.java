@@ -7,9 +7,8 @@ public class MaxSubArray {
         
         for (int i = 0; i < A.length; i++) {
 
-            curSum += A[i];
-            maxSum = Math.max(maxSum, curSum);
-            curSum = Math.max(0, curSum);
+            maxSum = Math.max(maxSum, curSum + A[i]);
+            curSum = Math.max(0, curSum + A[i]);
             
         }
         return maxSum;
