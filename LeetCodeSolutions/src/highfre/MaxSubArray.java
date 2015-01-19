@@ -1,6 +1,7 @@
 package highfre;
 
 public class MaxSubArray {
+	
 	public int maxSubArray(int[] A) {
         int curSum = 0;
         int maxSum = Integer.MIN_VALUE;
