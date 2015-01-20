@@ -3,7 +3,13 @@ package dfs;
 import java.util.ArrayList;
 
 public class PalindromePatitioning {
-	
+
+	/**
+     * @param s: A String waited to be cut
+     * @return: A list of lists of palindromes
+     * 
+     * @Note: there is a PalindromePartitioning II which is solved by dp in dp package
+     */
 	public ArrayList<ArrayList<String>> partition(String s) {
         ArrayList<ArrayList<String>> result = new ArrayList<ArrayList<String>>();
         if (s == null || s.length() == 0) {
