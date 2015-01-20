@@ -3,6 +3,8 @@ package backtracking;
 import java.util.ArrayList;
 
 public class GenerateParentheses {
+	
+	//Another problem about Parentheses: Valid Parentheses
 	public ArrayList<String> generateParenthesis(int n) {
 		ArrayList<String> result = new ArrayList<String>();
 		if (n <= 0) {
