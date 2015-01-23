@@ -1,4 +1,4 @@
-package dp;
+package datastructure.hash;
 
 import java.util.HashMap;
 
