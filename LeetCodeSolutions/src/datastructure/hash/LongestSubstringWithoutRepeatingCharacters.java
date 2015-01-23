@@ -10,8 +10,8 @@ public class LongestSubstringWithoutRepeatingCharacters {
         
         HashSet<Character> set = new HashSet<Character>();
         
+        //can can regard leftBound and i as two bound of the window which present the length of target string
         int leftBound = 0, max = 0;
-        
         for (int i = 0; i < s.length(); i++) {
             if (set.contains(s.charAt(i))) {
                 while (leftBound < i && s.charAt(leftBound) != s.charAt(i)) {
