@@ -7,9 +7,10 @@ public class ClimbStairs {
         if (n < 2) {
             return n;
         }
-        int[] sum = new int[3];
+        int[] sum = new int[2];
         sum[0] = 1;
         sum[1] = 2;
+        
         for (int i = 2; i < n; i++) {
             sum[i%2] = sum[(i - 1) % 2] + sum[(i - 2) % 2];
         }
