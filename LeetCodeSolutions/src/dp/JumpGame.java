@@ -1,6 +1,7 @@
 package dp;
 
 public class JumpGame {
+	
 	//O(n) method
     public boolean canJump(int[] A) {
         boolean[] can = new boolean[A.length];
