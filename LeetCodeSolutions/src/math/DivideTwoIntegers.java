@@ -43,6 +43,8 @@ public class DivideTwoIntegers {
 //		System.out.println(d.divide(2147483647, 1));
 //		System.out.println(d.divide(-1010369383, -2147483647));
 		System.out.println(d.divide(-2147483648, -1));
+//		System.out.println(d.divide(10, 2));
+		
 		
 //		System.out.println(Integer.MAX_VALUE);
 //		System.out.println(Math.abs(Integer.MIN_VALUE));
