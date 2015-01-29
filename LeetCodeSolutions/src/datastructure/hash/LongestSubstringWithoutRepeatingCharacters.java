@@ -30,6 +30,6 @@ public class LongestSubstringWithoutRepeatingCharacters {
 	
 	public static void main(String[] args) {
 		LongestSubstringWithoutRepeatingCharacters l = new LongestSubstringWithoutRepeatingCharacters();
-		System.out.println(l.lengthOfLongestSubstring("abva"));
+		System.out.println(l.lengthOfLongestSubstring("crwdatde"));
 	}
 }
