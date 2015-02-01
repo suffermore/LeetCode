@@ -55,6 +55,6 @@ public class DistinctSubsequences {
 
 	public static void main(String[] args) {
 		DistinctSubsequences d = new DistinctSubsequences();
-		System.out.println(d.numDistinct("ddd", "dd"));
+		System.out.println(d.numDistinct("d", "dd"));
 	}
 }
