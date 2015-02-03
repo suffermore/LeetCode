@@ -14,6 +14,7 @@ public class SimplifyPath {
 		Stack<String> stack = new Stack<String>();
 		for (String item: str) {
 			if (item.equals("") || item.equals(".")) {
+				//address conditions like "//" or "/./"
 				continue;
 			} else if (item.equals("..")) {
 				if(!stack.isEmpty()) {
