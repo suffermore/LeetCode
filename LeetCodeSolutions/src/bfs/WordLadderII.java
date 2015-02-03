@@ -31,18 +31,19 @@ public class WordLadderII {
         return ladders;
     }
 
-    void bfs(Map<String, List<String>> map, Map<String, Integer> distance,
-            String start, String end, Set<String> dict) {
+    void bfs(Map<String, List<String>> map, Map<String, Integer> distance, String start, String end, Set<String> dict) {
+    	
         Queue<String> q = new LinkedList<String>();
         q.offer(start);
         distance.put(start, 0);
+        
         for (String s : dict) {
             map.put(s, new ArrayList<String>());
         }
         
         while (!q.isEmpty()) {
+        	
             String crt = q.poll();
-
             List<String> nextList = expand(crt, dict);
             for (String next : nextList) {
                 map.get(crt).add(next);
