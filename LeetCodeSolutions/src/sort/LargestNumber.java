@@ -29,9 +29,16 @@ public class LargestNumber {
 			sb.append(str);
 		}
 		
-		BigInteger result = new BigInteger(sb.toString());
+//		BigInteger result = new BigInteger(sb.toString());
+//        return result.toString();
 		
-        return result.toString();
+
+		String s = sb.toString();
+		int i = 0;
+		while (s.charAt(i) == '0' && i != s.length() - 1) {
+		    i++;
+		}
+        return s.substring(i);
     }
 	
 }
