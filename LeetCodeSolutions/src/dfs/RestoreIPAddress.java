@@ -31,7 +31,7 @@ public class RestoreIPAddress {
 			return;
 		}
 		
-		for (int i = pos; i < s.length() && i < pos + 4; i ++) {
+		for (int i = pos; i < s.length() && i < pos + 3; i ++) {
 			String temp = s.substring(pos, i + 1);
 			if (isValid(temp)) {
 				path.add(temp);
