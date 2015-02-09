@@ -11,7 +11,7 @@ public class MaxSubArrayII {
 		//left
 		int[] left = new int[A.length];
 		left[0] = A[0];
-		int cur_sum = Integer.MIN_VALUE;
+		int cur_sum = A[0];
 		for (int i = 1; i < A.length; i++) {
 			cur_sum = Math.max(A[i], cur_sum + A[i]);	//cur_sum < 0 ? A[i] : cur_sum + A[i]
 			left[i] = Math.max(left[i-1], cur_sum);
@@ -20,7 +20,7 @@ public class MaxSubArrayII {
 		//right
 		int[] right = new int[A.length];
 		right[A.length - 1] = A[A.length - 1];
-		cur_sum = Integer.MIN_VALUE;
+		cur_sum = A[A.length - 1];
 		for (int i = A.length - 2; i >= 0; i--) {
 			cur_sum = Math.max(A[i], cur_sum + A[i]);
 			right[i] = Math.max(right[i + 1], cur_sum);
