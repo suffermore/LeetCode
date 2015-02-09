@@ -1,6 +1,10 @@
 package string;
 
 public class LongestCommonPrefix {
+	
+	// 1. Method 1, start from the first one, compare prefix with next string, until end;
+    // 2. Method 2, start from the first char, compare it with all string, and then the second char
+    // I am using method 1 here
 	public String longestCommonPrefix(String[] strs) {
 		if (strs == null || strs.length == 0) {
             return "";
