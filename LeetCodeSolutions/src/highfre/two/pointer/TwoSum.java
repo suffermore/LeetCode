@@ -1,4 +1,4 @@
-package highfre;
+package highfre.two.pointer;
 
 import java.util.HashMap;
 
