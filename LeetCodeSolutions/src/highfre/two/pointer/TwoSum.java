@@ -1,5 +1,6 @@
 package highfre.two.pointer;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class TwoSum {
@@ -20,6 +21,32 @@ public class TwoSum {
         }
         return result;
     }
+	
+	//Can¡¯t use the sort method here, since the question asks for indexes.
+	public int[] twoSumII(int[] nums, int tar) {
+		if(nums == null || nums.length < 2) {
+    		return null;
+    	}
+		Arrays.sort(nums);
+		int[] rst = new int[2];
+		
+		int left = 0;
+		int right = nums.length - 1;
+		while (left < right) {
+			int sum = nums[left] +  nums[right];
+			if (sum == tar) {
+				rst[0] = left + 1;
+                rst[1] = right + 1;
+                break;
+            } else if (sum < tar){
+                left++;
+            } else {
+                right--;
+            }
+		}
+        return rst;
+		
+	}
 	
 	public static void main(String[] args) {
 		TwoSum t = new TwoSum();
