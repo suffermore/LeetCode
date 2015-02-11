@@ -19,7 +19,6 @@ public class Anagrams {
         	char[] arr = str.toCharArray();
         	Arrays.sort(arr);
         	String temp = String.valueOf(arr);
-//        	String temp = arr.toString();
         	if (map.containsKey(temp)) {
         		map.get(temp).add(str);
         	} else {
