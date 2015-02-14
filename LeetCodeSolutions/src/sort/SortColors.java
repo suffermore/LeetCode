@@ -2,8 +2,33 @@ package sort;
 
 //problem of two pointers
 public class SortColors {
-	
-	public void sortColors(int[] A) {
+	//O(n^2) method
+    public void sortColors(int[] A) {
+        if (A == null || A.length == 0) {
+            return;
+        }
+        int left = 0;
+        left = partition(A, 0, A.length - 1, 0);
+        partition(A, left, A.length - 1, 1);
+    }
+    
+    private int partition(int[] A, int left, int right, int tar) {
+        while (left < right) {
+            while (A[left] == tar && left < right) {
+                left++;
+            }
+            while(A[right] != tar && left < right) {
+                right--;
+            }
+            if (left < right) {
+                swap(A, left, right);
+            }
+        }
+        return left;
+    }
+    
+    //O(n) method
+	public void sortColorsII(int[] A) {
         if (A == null || A.length == 0) {
             return;
         }
@@ -36,4 +61,10 @@ public class SortColors {
         A[a] = A[b];
         A[b] = temp;
     }
+    
+    public static void main(String[] args) {
+    	int[] A = {0,0};
+		SortColors s = new SortColors();
+		s.sortColors(A);
+	}
 }
