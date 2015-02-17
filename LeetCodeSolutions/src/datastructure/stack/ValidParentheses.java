@@ -20,6 +20,7 @@ public class ValidParentheses {
                 }
             }
         }
+        //do not think as return true; it's determined by the stack;
         return stack.isEmpty();
     }
     
