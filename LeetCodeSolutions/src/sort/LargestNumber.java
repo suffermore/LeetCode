@@ -36,4 +36,9 @@ public class LargestNumber {
         return s.substring(i);
     }
 	
+	public static void main(String[] args) {
+		int[] num = {999999998,999999997,999999999};
+		LargestNumber l = new LargestNumber();
+		System.out.println(l.largestNumber(num));
+	}
 }
