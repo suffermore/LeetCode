@@ -1,6 +1,5 @@
 package sort;
 
-import java.math.BigInteger;
 import java.util.Arrays;
 import java.util.Comparator;
 
@@ -29,10 +28,6 @@ public class LargestNumber {
 			sb.append(str);
 		}
 		
-//		BigInteger result = new BigInteger(sb.toString());
-//        return result.toString();
-		
-
 		String s = sb.toString();
 		int i = 0;
 		while (s.charAt(i) == '0' && i != s.length() - 1) {
