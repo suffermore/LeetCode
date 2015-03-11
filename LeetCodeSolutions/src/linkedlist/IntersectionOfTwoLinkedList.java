@@ -53,4 +53,29 @@ public class IntersectionOfTwoLinkedList {
 		}
 		return p;
 	}
+	
+	//Reverse - O(m + n) time, O(1) space
+	public ListNode getIntersectionNodeIII(ListNode headA, ListNode headB) {
+		ListNode newHeadA = reverse(headA);
+		ListNode newHeadB = reverse(headB);
+		
+		ListNode pre = null;
+		while (newHeadA != null && newHeadB != null && newHeadA.val == newHeadB.val) {
+			pre = newHeadA;
+			newHeadA = newHeadA.next;
+			newHeadB = newHeadB.next;
+		}
+		
+		return pre;
+	}
+	private ListNode reverse(ListNode head) {
+		ListNode pre = null;
+		while (head != null) {
+			ListNode next = head.next;
+			head.next = pre;
+			pre = head;
+			head = next;
+		}
+		return pre;
+	}
 }

@@ -28,6 +28,7 @@ public class BestTimeToBuyAndSellStockIII {
         //enumerate division of two transactions
         int profit = 0;
         for (int i = 0; i < prices.length; i++) {
+            //can sell and buy in the same day
             profit = Math.max(profit, left[i] + right[i]);
         }
         return profit;
