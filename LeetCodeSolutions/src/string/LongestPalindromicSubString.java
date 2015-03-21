@@ -28,7 +28,7 @@ public class LongestPalindromicSubString {
     
     // Given a center, either one letter or two letter, find longest palindrome
     private String helper(String s, int left, int right) {
-    	
+    	//do not forget left >= 0 && right < s.length()
     	while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
     		left--;
     		right++;
