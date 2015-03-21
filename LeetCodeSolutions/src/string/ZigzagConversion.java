@@ -2,6 +2,35 @@ package string;
 
 public class ZigzagConversion {
 	public String convert(String s, int nRows) {
+        int len = s.length();
+        //try best to make it easy;
+        if (len <= nRows || nRows == 1) {
+        	return s;
+        }
+        
+        char[] chars = new char[len];
+        int index = 0;
+        int size = 2 * nRows - 2;
+        
+        for (int i = 0; i < nRows; i++) {
+        	
+            //fill char array row by row
+            for (int j = i; j < len; j+= size) {
+                chars[index++] = s.charAt(j);
+                
+                if (i != 0 && i != nRows - 1) {
+                	//chars[j + size - 2*i] is the one between chars[j] and chars[j + size]
+                    int tmp = j + size - 2 * i;
+                    if (tmp < len) {
+                        chars[index++] = s.charAt(tmp);
+                    }
+                }
+            }
+        }
+        return new String(chars);
+    }
+	
+	public String convertII(String s, int nRows) {
         int length = s.length();
         //try best to make it easy;
         if (length <= nRows || nRows == 1) {
