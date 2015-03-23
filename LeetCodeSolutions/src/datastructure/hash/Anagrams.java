@@ -31,9 +31,6 @@ public class Anagrams {
         Iterator<Entry<String, ArrayList<String>>> iter = map.entrySet().iterator();
         
         while (iter.hasNext()) {
-//        	Map.Entry entry = (Map.Entry) iter.next();
-//        	ArrayList<String> val = (ArrayList<String>) entry.getValue();
-
         	ArrayList<String> val = iter.next().getValue();
             if (val.size() > 1) {
             	res.addAll(val);
@@ -44,7 +41,7 @@ public class Anagrams {
 	
 	public static void main(String[] args) {
 		Anagrams a = new Anagrams();
-		String[] strs = {"", ""};
-		a.anagrams(strs);
+		String[] strs = {"ab", "ba","ce","et","te"};
+		System.out.println(a.anagrams(strs));
 	}
 }
