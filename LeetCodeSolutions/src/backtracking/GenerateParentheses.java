@@ -15,7 +15,7 @@ public class GenerateParentheses {
     }
 	
 	private void helper(ArrayList<String> result, String s, int left, int right) {
-		if (left < right || left < 0 || right < 0) {
+		if (left > right || left < 0 || right < 0) {
 			return;
 		}
 		if (left == 0 && right == 0) {
