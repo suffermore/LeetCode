@@ -3,18 +3,17 @@ package dp;
 public class JumpGame {
 	
 	//O(n) method
-    public boolean canJump(int[] A) {
-        boolean[] can = new boolean[A.length];
-        can[0] = true;
-        int maxCover = 0;
-        for (int i = 0; i <= maxCover; i++) {
-            if (i + A[i] > maxCover) {
-                maxCover = i + A[i];
-            }
-            if (maxCover >= A.length - 1) {
+	public boolean canJump(int[] A) {
+        
+        int cover = 0;
+        //easy to be wrong: <= ; i + A[i]; A.length - 1
+        for (int i = 0; i <= cover; i++) {
+            cover = Math.max(cover, i + A[i]);
+            if (cover >= A.length - 1) {
                 return true;
             }
         }
+        
         return false;
     }
     

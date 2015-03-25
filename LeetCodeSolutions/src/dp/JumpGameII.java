@@ -2,25 +2,25 @@ package dp;
 
 public class JumpGameII {
 	//O(n) method
-    public int jump(int[] A) {
-    	int curCover = 0;
-    	int count = 0;
-    	int nextCover = 0;	//when traverse i under curCover, there might be a bigger cover be found.
-    	
-    	int i = 0;
-    	while (i < A.length) {
-    		if (nextCover >= A.length - 1) {
-    			break;
-    		}
-    		while (i <= nextCover) {
-    			curCover = Math.max(curCover, i + A[i]);
-    			i++;
-    		}
-    		count++;
-    		nextCover = curCover;
-    	}
-    	
-        return count;
+	public int jump(int[] A) {
+        int curCover = 0;
+        int nextCover = 0;
+        int step = 0;
+        
+        int i = 0;
+        while (i < A.length) {
+            if (curCover >= A.length - 1) {
+                break;
+            }
+            
+            while (i <= curCover) {
+                nextCover = Math.max(nextCover, i + A[i]);
+                i++;
+            }
+            step++;
+            curCover = nextCover;
+        }
+        return step;
     }
     
     //O(n^2) method
