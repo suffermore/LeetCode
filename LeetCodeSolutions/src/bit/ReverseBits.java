@@ -1,4 +1,4 @@
-package datastructure.hash;
+package bit;
 
 public class ReverseBits {
 	// you need treat n as an unsigned value
